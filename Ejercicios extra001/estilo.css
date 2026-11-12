@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fb;
+    color: #26364a;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #10243a;
+    color: #ffffff;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+}
+
+.logo {
+    font-size: 27px;
+    letter-spacing: 1.5px;
+}
+
+.logo span {
+    color: #35baf0;
+}
+
+.navegacion ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navegacion a:hover {
+    color: #35baf0;
+}
+
+
+.portada {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    padding: 55px 9%;
+
+    background:
+    linear-gradient(rgba(10, 30, 52, 0.85),
+                    rgba(10, 30, 52, 0.85)),
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.contenido-portada {
+    max-width: 680px;
+}
+
+.subtitulo {
+    color: #35baf0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.contenido-portada h1 {
+    font-size: 43px;
+    margin-bottom: 18px;
+}
+
+.contenido-portada p {
+    line-height: 1.8;
+    color: #e0eaf4;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 27px;
+    background-color: #159bd0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #0879a8;
+}
+
+.seccion {
+    padding: 70px 8%;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: 29px;
+    margin-bottom: 40px;
+    color: #102e4d;
+}
+
+.contenido-tematica {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.contenido-tematica img {
+    width: 46%;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.contenido-tematica h3 {
+    color: #159bd0;
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.contenido-tematica p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.ejercicios {
+    background-color: #eaf1f8;
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedor-ejercicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    padding: 27px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #26364a;
+    border-bottom: 5px solid #159bd0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.13);
+}
+
+.tarjeta span {
+    display: inline-block;
+    color: #159bd0;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.tarjeta p {
+    color: #68788c;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.tarjeta-datos {
+    max-width: 780px;
+    margin: auto;
+    padding: 32px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.09);
+}
+
+.foto img {
+    width: 175px;
+    height: 195px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #159bd0;
+}
+
+.informacion p {
+    margin: 14px 0;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #10243a;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+    .contenedor-ejercicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenido-tematica {
+        flex-direction: column;
+    }
+
+    .contenido-tematica img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navegacion ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .contenido-portada h1 {
+        font-size: 31px;
+    }
+
+    .contenedor-ejercicios {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-datos {
+        flex-direction: column;
+        text-align: center;
+    }
+}

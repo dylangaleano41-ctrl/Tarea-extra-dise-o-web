@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ejercicio007</title>
+</head>
+<body>
+  <h1>Formulario de inscripción</h1>
+
+  <form action="#" method="post">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre"
+           placeholder="Escriba su nombre" maxlength="80" required>
+    <br><br>
+
+    <label for="carnet">Número de carnet:</label>
+    <input type="text" id="carnet" name="carnet"
+           placeholder="Ej. 2026001" maxlength="15" required>
+    <br><br>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo"
+           placeholder="nombre@ejemplo.com" required>
+    <br><br>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena"
+           placeholder="Mínimo 8 caracteres" minlength="8" required>
+    <br><br>
+
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha" name="fecha">
+    <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad"
+           min="16" max="100" placeholder="Ej. 20" required>
+    <br><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono"
+           placeholder="Ej. 8888-8888" maxlength="15">
+    <br><br>
+
+    <label for="carrera">Carrera:</label>
+    <select id="carrera" name="carrera" required>
+      <option value="">Seleccione una carrera</option>
+      <option value="sistemas">Ingeniería en Sistemas</option>
+      <option value="computacion">Ingeniería en Computación</option>
+      <option value="telematica">Ingeniería en Telemática</option>
+    </select>
+    <br><br>
+
+    <p>Turno:</p>
+    <input type="radio" id="matutino" name="turno" value="matutino" required>
+    <label for="matutino">Matutino</label>
+    <input type="radio" id="vespertino" name="turno" value="vespertino">
+    <label for="vespertino">Vespertino</label>
+    <br><br>
+
+    <label for="observaciones">Observaciones:</label><br>
+    <textarea id="observaciones" name="observaciones"
+              rows="4" cols="40" maxlength="300"
+              placeholder="Escriba aquí sus observaciones"></textarea>
+    <br><br>
+
+    <input type="checkbox" id="acepto" name="acepto" required>
+    <label for="acepto">Acepto las condiciones de inscripción.</label>
+    <br><br>
+
+    <button type="submit">Registrar</button>
+    <button type="reset">Limpiar</button>
+  </form>
+
+  <h2>Preguntas de análisis</h2>
+  <ol>
+    <li><strong>¿Qué diferencia existe entre input type="text" e input type="email"?</strong><br>
+      text permite escribir texto general; email valida que el contenido tenga un formato de correo electrónico.</li>
+    <li><strong>¿Para qué se utiliza el atributo name?</strong><br>
+      Identifica el dato de cada campo cuando se envía el formulario.</li>
+    <li><strong>¿Cuál es la diferencia entre radio y checkbox?</strong><br>
+      Radio permite seleccionar una opción dentro de un grupo; checkbox permite marcar o desmarcar opciones de manera independiente.</li>
+    <li><strong>¿Qué función cumple required?</strong><br>
+      Hace obligatorio completar o seleccionar un campo antes de enviar el formulario.</li>
+    <li><strong>¿HTML5 permite almacenar directamente los datos del formulario en una base de datos?</strong><br>
+      No. HTML5 crea la estructura del formulario; para guardar datos se necesita un servidor y un sistema de almacenamiento o base de datos.</li>
+  </ol>
+</body>
+</html>
